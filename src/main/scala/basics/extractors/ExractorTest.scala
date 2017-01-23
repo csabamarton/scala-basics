@@ -16,9 +16,8 @@ object ExractorTest extends App {
   }
 
   class StringSeqContains(value: String) {
-    def unapply(in: Seq[String]): Boolean = {
-      in contains value
-    }
+    def unapply(in: Seq[String]): Boolean = in contains value
+
   }
 
   val student1 = Student("Csaba Marton", List(Address("Boulder", "Colorado"), Address("Palo Alto", "Califorgia")))
