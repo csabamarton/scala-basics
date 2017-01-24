@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movements>
+    <movement type="capoeira">
+        <name>Aú</name>
+        <description>It's like a cartwheel</description>
+    </movement>
+    <movement type="capoeira">
+        <name>Macaco</name>
+        <description>From squat position you have to jump back</description>
+    </movement>
+    <movement type="salsa">
+        <name>Vacila</name>
+        <description>You make a finta de turn but realise that noooo way</description>
+    </movement>
+</movements>
