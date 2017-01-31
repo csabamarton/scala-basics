@@ -18,13 +18,30 @@ object CollectionsPractise {
       Person("Adri Nemeth", 26, 'female) ::
       Person("Alfons Brock", 21, 'male) :: Nil
 
-  val compressedPersons = persons.foldLeft(List[String]()) { (z, person) =>
+  val compressedPersonsFromLeft = persons.foldLeft(List[String]()) { (z, person) =>
     val title = person.sex match {
       case 'male => "Mr."
       case 'female => "Ms."
     }
 
     z :+ s"$title ${person.name}, ${person.age}"
+  }
+
+  val compressedPersonsFromRight = persons.foldRight(List[String]()) { (p, z) =>
+    val title = p.sex match {
+      case 'male => "Mr."
+      case 'female => "Ms."
+    }
+
+    z :+ s"$title ${p.name}, ${p.age}"
+
+  }
+
+
+  val (names, ageSum) = persons.foldLeft("", 0) { case ((sexList, ageList), person) =>
+    (sexList + " " + person.name, ageList + person.age)
+
+
   }
 
 
