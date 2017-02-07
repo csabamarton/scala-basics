@@ -28,5 +28,7 @@ object Collections {
   0.1 to 1.0 by 0.1
 
   (1).to(10).by(1)
-  
+
+  val list = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+  list.span(_ == list.head)
 }
