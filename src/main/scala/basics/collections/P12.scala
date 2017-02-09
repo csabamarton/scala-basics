@@ -18,7 +18,7 @@ object P12 extends App {
 
     list match {
       case (count, symbol) :: Nil => extractTuple(count, symbol)
-      case (count, symbol) :: tail => extractTuple(count, symbol) ++ decode(tail)
+      case (count, symbol) :: tail => extractTuple(count, symbol) ::: decode(tail)
       case Nil => Nil
     }
   }
