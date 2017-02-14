@@ -10,7 +10,7 @@ Hint: Use the solution to problem P20
 
 object P23 extends App {
   def randomSelect[A](num: Int, list: List[A]): List[A] = {
-    if (num == 0) Nil
+    if (num == 1) list.head :: Nil
     else {
       val (rest, e) = P20.removeAt(new util.Random().nextInt(list.length - 1), list)
       e :: randomSelect(num - 1, rest)
